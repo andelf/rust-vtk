@@ -3,8 +3,6 @@ name = "vtk"
 version = "0.0.1"
 authors = ["andelf <andelf@gmail.com>"]
 
-
-links = "cvtk"
 build = "build.rs"
 
 [dependencies]

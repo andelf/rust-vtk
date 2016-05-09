@@ -16,13 +16,17 @@
 #include "vtkInteractorStyleTrackballCamera.h"
 %}
 
-
+// VTK uses priveate constructor and destructor so:
 %nodefaultctor;  // Disable the default constructor
 %nodefaultdtor;  // Disable the default destructor
+
+
+%rename(GetCenterVec) vtkConeSource::GetCenter(double[3]);
+
 class vtkConeSource {
 public:
         static vtkConeSource * 	New ();
-
+        void Delete ();
 
         void 	SetHeight (double);
         double 	GetHeight ();
@@ -30,6 +34,7 @@ public:
         double 	GetRadius ();
         void 	SetResolution (int);
         int 	GetResolution ();
+
         void 	SetCenter (double, double, double);
         double * 	GetCenter ();
         void 	GetCenter (double data[3]);
@@ -39,7 +44,14 @@ public:
 
         void 	SetAngle (double angle);
         double 	GetAngle ();
+};
 
+
+
+class vtkRenderWindow {
+public:
+        static vtkRenderWindow * 	New ();
+        void Delete ();
 
 
 
