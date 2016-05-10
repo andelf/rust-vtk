@@ -47,12 +47,33 @@ public:
 };
 
 
+class vtkRenderer {
+public:
+        static vtkRenderer * 	New ();
+        void Delete ();
+
+        void 	SetBackground (double, double, double);
+        void 	SetBackground2 (double, double, double);
+        void 	SetGradientBackground (bool);
+};
 
 class vtkRenderWindow {
 public:
         static vtkRenderWindow * 	New ();
         void Delete ();
 
+        void 	AddRenderer (vtkRenderer *);
+        void 	SetSize (int, int);
+};
 
 
+class vtkRenderWindowInteractor {
+public:
+        static vtkRenderWindowInteractor * 	New ();
+        void Delete ();
+
+        void 	SetRenderWindow (vtkRenderWindow *aren);
+        void 	Initialize ();
+
+        void 	Start ();
 };
