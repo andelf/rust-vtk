@@ -12,14 +12,12 @@ fn main() {
     // Builds the project in the directory located in `libfoo`, installing it
     // into $OUT_DIR
 
-    let dst = cmake::Config::new("libvtk_wrapper")
+    let dst = cmake::Config::new("vtk_c_wrapper")
         .define("VTK_RENDERING_BACKEND", "Qt")
         .build();
 
     let out_dir = env::var("OUT_DIR").unwrap();
-
     let libs_path = Path::new(&out_dir).join("build/.libs");
-
     let f = BufReader::new(File::open(libs_path).unwrap());
 
     for line in f.lines() {
@@ -42,6 +40,6 @@ fn main() {
     }
 
     println!("cargo:rustc-link-search=native={}/lib", dst.display());
-    // or dylib?
-    println!("cargo:rustc-link-lib=static=vtk_wrapper");
+    println!("cargo:rustc-link-lib=static=vtk_c_wrapper");
+    println!("cargo:rustc-link-lib=dylib=stdc++");
 }

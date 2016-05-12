@@ -8,7 +8,7 @@ endif()
 
 set(CMAKE_MACOSX_RPATH 0)
 
-PROJECT (vtk_wrapper)
+PROJECT (vtk_c_wrapper)
 
 find_package(VTK COMPONENTS
   vtkFiltersSources
@@ -17,17 +17,13 @@ find_package(VTK COMPONENTS
 )
 include(${VTK_USE_FILE})
 
-#add_library(vtk_wrapper SHARED lib.cxx)
-add_library(vtk_wrapper vtk_swig_wrap.cxx vtk_proxy.c)
-target_link_libraries(vtk_wrapper ${VTK_LIBRARIES})
+add_library(vtk_c_wrapper vtk_swig_wrap.cxx vtk_proxy.c)
+target_link_libraries(vtk_c_wrapper ${VTK_LIBRARIES})
+
+install (TARGETS vtk_c_wrapper ARCHIVE DESTINATION lib)
 
 
-install (TARGETS vtk_wrapper ARCHIVE DESTINATION lib)
-#install (TARGETS vtk_wrapper DESTINATION lib)
-
-
-
-FILE(WRITE ${CMAKE_BINARY_DIR}/.vtk_version ${VTK_VERSION})
+file(WRITE ${CMAKE_BINARY_DIR}/.vtk_version ${VTK_VERSION})
 
 SET(CONTENTS "")
 FOREACH(line ${VTK_LIBRARIES})
