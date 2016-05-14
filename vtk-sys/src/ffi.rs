@@ -36,6 +36,8 @@ pub type vtkConeSource = SwigObj;
 pub type vtkRenderer = SwigObj;
 pub type vtkRenderWindow = SwigObj;
 pub type vtkRenderWindowInteractor = SwigObj;
+pub type vtkInteractorStyleTrackballCamera = SwigObj;
+pub type vtkBoxWidget = SwigObj;
 extern "C" {
     
     pub static mut SWIG_exc: Struct_SWIG_exc_struct;
@@ -212,4 +214,28 @@ extern "C" {
                                                      carg2: *mut SwigObj);
     pub fn vtkRenderWindowInteractor_Initialize(carg1: *mut SwigObj);
     pub fn vtkRenderWindowInteractor_Start(carg1: *mut SwigObj);
+    pub fn vtkRenderWindowInteractor_SetInteractorStyle(carg1:
+                                                            *mut vtkRenderWindowInteractor,
+                                                        carg2: *mut SwigObj);
+    pub fn vtkRenderWindowInteractor_GetInteractorStyle(carg1:
+                                                            *mut vtkRenderWindowInteractor)
+     -> *mut SwigObj;
+    pub fn vtkInteractorStyleTrackballCamera_New() -> *mut SwigObj;
+    pub fn vtkInteractorStyleTrackballCamera_Delete(carg1: *mut SwigObj);
+    pub fn vtkBoxWidget_New() -> *mut SwigObj;
+    pub fn vtkBoxWidget_Delete(carg1: *mut SwigObj);
+    pub fn vtkBoxWidget_SetInteractor(carg1: *mut vtkBoxWidget,
+                                      carg2: *mut SwigObj);
+    pub fn vtkBoxWidget_GetInteractor(carg1: *mut vtkBoxWidget)
+     -> *mut SwigObj;
+    pub fn vtkBoxWidget_PlaceWidget(carg1: *mut SwigObj);
+    pub fn vtkBoxWidget_SetPlaceFactor(carg1: *mut vtkBoxWidget,
+                                       carg2: ::std::os::raw::c_double);
+    pub fn vtkBoxWidget_GetPlaceFactor(carg1: *mut vtkBoxWidget)
+     -> ::std::os::raw::c_double;
+    pub fn vtkBoxWidget_SetProp3D(carg1: *mut vtkBoxWidget,
+                                  carg2: *mut SwigObj);
+    pub fn vtkBoxWidget_GetProp3D(carg1: *mut vtkBoxWidget) -> *mut SwigObj;
+    pub fn vtkBoxWidget_On(carg1: *mut SwigObj);
+    pub fn vtkBoxWidget_Off(carg1: *mut SwigObj);
 }

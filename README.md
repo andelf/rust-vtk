@@ -8,4 +8,4 @@ Proof of concept.
 
 Can show a empty Renderer window with gradient background.
 
-![rust-vtk sample](http://i.imgur.com/UQyI6XE.png)
+![Imgur](http://i.imgur.com/n8UwbuR.png)

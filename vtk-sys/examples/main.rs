@@ -32,8 +32,8 @@ fn main() {
         let ren1 = ffi::vtkRenderer_New();
         ffi::vtkRenderer_AddActor(ren1, cone_actor);
         ffi::vtkRenderer_SetBackground(ren1, 0.1, 0.2, 0.4);
-
-
+        ffi::vtkRenderer_SetBackground2(ren1, 0.0, 0.0, 0.0);
+        ffi::vtkRenderer_SetGradientBackground(ren1, 1);
 
         let ren_win = ffi::vtkRenderWindow_New();
         ffi::vtkRenderWindow_AddRenderer(ren_win, ren1);
@@ -44,13 +44,27 @@ fn main() {
         ffi::vtkRenderWindowInteractor_SetRenderWindow(iren, ren_win);
 
 
+        let style = ffi::vtkInteractorStyleTrackballCamera_New();
+        ffi::vtkRenderWindowInteractor_SetInteractorStyle(iren, style);
+
+        let box_widget = ffi::vtkBoxWidget_New();
+        ffi::vtkBoxWidget_SetInteractor(box_widget, iren);
+        ffi::vtkBoxWidget_SetPlaceFactor(box_widget, 1.25);
+
+        ffi::vtkBoxWidget_SetProp3D(box_widget, cone_actor);
+        ffi::vtkBoxWidget_PlaceWidget(box_widget);
+
+        ffi::vtkBoxWidget_On(box_widget);
+
+
+
 
         ffi::vtkRenderWindowInteractor_Initialize(iren);
         ffi::vtkRenderWindowInteractor_Start(iren);
 
 
 
-
+        // TODO: free
         ffi::vtkObjectBase_Delete(cone);
 
     }

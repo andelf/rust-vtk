@@ -212,5 +212,26 @@ void vtkRenderWindowInteractor_Delete(SwigObj * carg1);
 void vtkRenderWindowInteractor_SetRenderWindow(SwigObj * carg1, SwigObj * carg2);
 void vtkRenderWindowInteractor_Initialize(SwigObj * carg1);
 void vtkRenderWindowInteractor_Start(SwigObj * carg1);
+void vtkRenderWindowInteractor_SetInteractorStyle(vtkRenderWindowInteractor * carg1, SwigObj * carg2);
+/*aaaaaa*/SwigObj * vtkRenderWindowInteractor_GetInteractorStyle(vtkRenderWindowInteractor * carg1);
+
+typedef SwigObj vtkInteractorStyleTrackballCamera;
+
+/*aaaaaa*/SwigObj * vtkInteractorStyleTrackballCamera_New();
+void vtkInteractorStyleTrackballCamera_Delete(SwigObj * carg1);
+
+typedef SwigObj vtkBoxWidget;
+
+/*aaaaaa*/SwigObj * vtkBoxWidget_New();
+void vtkBoxWidget_Delete(SwigObj * carg1);
+void vtkBoxWidget_SetInteractor(vtkBoxWidget * carg1, SwigObj * carg2);
+/*aaaaaa*/SwigObj * vtkBoxWidget_GetInteractor(vtkBoxWidget * carg1);
+void vtkBoxWidget_PlaceWidget(SwigObj * carg1);
+void vtkBoxWidget_SetPlaceFactor(vtkBoxWidget * carg1, double carg2);
+double vtkBoxWidget_GetPlaceFactor(vtkBoxWidget * carg1);
+void vtkBoxWidget_SetProp3D(vtkBoxWidget * carg1, SwigObj * carg2);
+/*aaaaaa*/SwigObj * vtkBoxWidget_GetProp3D(vtkBoxWidget * carg1);
+void vtkBoxWidget_On(SwigObj * carg1);
+void vtkBoxWidget_Off(SwigObj * carg1);
 
 #endif /* _vtk_proxy_H_ */

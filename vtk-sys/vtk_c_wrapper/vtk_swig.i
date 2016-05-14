@@ -161,4 +161,35 @@ public:
         void 	Initialize ();
 
         void 	Start ();
+
+        virtual void 	SetInteractorStyle (vtkInteractorObserver *);
+        virtual vtkInteractorObserver * 	GetInteractorStyle ();
+};
+
+
+class vtkInteractorStyleTrackballCamera {
+public:
+        static vtkInteractorStyleTrackballCamera * 	New ();
+        void Delete ();
+};
+
+
+class vtkBoxWidget {
+public:
+        static vtkBoxWidget * 	New ();
+        void Delete ();
+
+        virtual void 	SetInteractor (vtkRenderWindowInteractor *iren);
+        virtual vtkRenderWindowInteractor * 	GetInteractor ();
+
+        void 	PlaceWidget ();
+
+        virtual void 	SetPlaceFactor (double);
+        virtual double 	GetPlaceFactor ();
+
+        virtual void 	SetProp3D (vtkProp3D *);
+        virtual vtkProp3D * 	GetProp3D ();
+
+        void 	On ();
+        void 	Off ();
 };

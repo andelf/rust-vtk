@@ -110,6 +110,21 @@ void _wrap_vtkRenderWindowInteractor_Delete(SwigObj * carg1);
 void _wrap_vtkRenderWindowInteractor_SetRenderWindow(SwigObj * carg1, SwigObj * carg2);
 void _wrap_vtkRenderWindowInteractor_Initialize(SwigObj * carg1);
 void _wrap_vtkRenderWindowInteractor_Start(SwigObj * carg1);
+void _wrap_vtkRenderWindowInteractor_SetInteractorStyle(vtkRenderWindowInteractor * carg1, SwigObj * carg2);
+/*aaaaaa*/SwigObj * _wrap_vtkRenderWindowInteractor_GetInteractorStyle(vtkRenderWindowInteractor * carg1);
+/*aaaaaa*/SwigObj * _wrap_vtkInteractorStyleTrackballCamera_New();
+void _wrap_vtkInteractorStyleTrackballCamera_Delete(SwigObj * carg1);
+/*aaaaaa*/SwigObj * _wrap_vtkBoxWidget_New();
+void _wrap_vtkBoxWidget_Delete(SwigObj * carg1);
+void _wrap_vtkBoxWidget_SetInteractor(vtkBoxWidget * carg1, SwigObj * carg2);
+/*aaaaaa*/SwigObj * _wrap_vtkBoxWidget_GetInteractor(vtkBoxWidget * carg1);
+void _wrap_vtkBoxWidget_PlaceWidget(SwigObj * carg1);
+void _wrap_vtkBoxWidget_SetPlaceFactor(vtkBoxWidget * carg1, double carg2);
+double _wrap_vtkBoxWidget_GetPlaceFactor(vtkBoxWidget * carg1);
+void _wrap_vtkBoxWidget_SetProp3D(vtkBoxWidget * carg1, SwigObj * carg2);
+/*aaaaaa*/SwigObj * _wrap_vtkBoxWidget_GetProp3D(vtkBoxWidget * carg1);
+void _wrap_vtkBoxWidget_On(SwigObj * carg1);
+void _wrap_vtkBoxWidget_Off(SwigObj * carg1);
 
 void free_output_cstr(char * carg1) {
   return _wrap_free_output_cstr(carg1);
@@ -413,5 +428,50 @@ void vtkRenderWindowInteractor_Initialize(SwigObj * carg1) {
 }
 void vtkRenderWindowInteractor_Start(SwigObj * carg1) {
   return _wrap_vtkRenderWindowInteractor_Start(carg1);
+}
+void vtkRenderWindowInteractor_SetInteractorStyle(vtkRenderWindowInteractor * carg1, SwigObj * carg2) {
+  return _wrap_vtkRenderWindowInteractor_SetInteractorStyle(carg1, carg2);
+}
+/*aaaaaa*/SwigObj * vtkRenderWindowInteractor_GetInteractorStyle(vtkRenderWindowInteractor * carg1) {
+  return _wrap_vtkRenderWindowInteractor_GetInteractorStyle(carg1);
+}
+/*aaaaaa*/SwigObj * vtkInteractorStyleTrackballCamera_New() {
+  return _wrap_vtkInteractorStyleTrackballCamera_New();
+}
+void vtkInteractorStyleTrackballCamera_Delete(SwigObj * carg1) {
+  return _wrap_vtkInteractorStyleTrackballCamera_Delete(carg1);
+}
+/*aaaaaa*/SwigObj * vtkBoxWidget_New() {
+  return _wrap_vtkBoxWidget_New();
+}
+void vtkBoxWidget_Delete(SwigObj * carg1) {
+  return _wrap_vtkBoxWidget_Delete(carg1);
+}
+void vtkBoxWidget_SetInteractor(vtkBoxWidget * carg1, SwigObj * carg2) {
+  return _wrap_vtkBoxWidget_SetInteractor(carg1, carg2);
+}
+/*aaaaaa*/SwigObj * vtkBoxWidget_GetInteractor(vtkBoxWidget * carg1) {
+  return _wrap_vtkBoxWidget_GetInteractor(carg1);
+}
+void vtkBoxWidget_PlaceWidget(SwigObj * carg1) {
+  return _wrap_vtkBoxWidget_PlaceWidget(carg1);
+}
+void vtkBoxWidget_SetPlaceFactor(vtkBoxWidget * carg1, double carg2) {
+  return _wrap_vtkBoxWidget_SetPlaceFactor(carg1, carg2);
+}
+double vtkBoxWidget_GetPlaceFactor(vtkBoxWidget * carg1) {
+  return _wrap_vtkBoxWidget_GetPlaceFactor(carg1);
+}
+void vtkBoxWidget_SetProp3D(vtkBoxWidget * carg1, SwigObj * carg2) {
+  return _wrap_vtkBoxWidget_SetProp3D(carg1, carg2);
+}
+/*aaaaaa*/SwigObj * vtkBoxWidget_GetProp3D(vtkBoxWidget * carg1) {
+  return _wrap_vtkBoxWidget_GetProp3D(carg1);
+}
+void vtkBoxWidget_On(SwigObj * carg1) {
+  return _wrap_vtkBoxWidget_On(carg1);
+}
+void vtkBoxWidget_Off(SwigObj * carg1) {
+  return _wrap_vtkBoxWidget_Off(carg1);
 }
 

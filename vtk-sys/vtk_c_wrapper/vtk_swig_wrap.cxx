@@ -483,6 +483,14 @@ const char* Swig_typename_vtkRenderWindowInteractor = "vtkRenderWindowInteractor
 
 SWIGPROTECT(vtkRenderWindowInteractor * vtkRenderWindowInteractor_New();)
 
+const char* Swig_typename_vtkInteractorStyleTrackballCamera = "vtkInteractorStyleTrackballCamera";
+
+SWIGPROTECT(vtkInteractorStyleTrackballCamera * vtkInteractorStyleTrackballCamera_New();)
+
+const char* Swig_typename_vtkBoxWidget = "vtkBoxWidget";
+
+SWIGPROTECT(vtkBoxWidget * vtkBoxWidget_New();)
+
 
 SWIGINTERN SwigObj *SWIG_create_object(const char *classname) {
 SWIG_runtime_init();
@@ -2013,6 +2021,217 @@ extern "C" {
       arg1 = (vtkRenderWindowInteractor *) carg1->obj;
     }
     (arg1)->Start();
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkRenderWindowInteractor_SetInteractorStyle(SwigObj * carg1, SwigObj * carg2) {
+    vtkRenderWindowInteractor *arg1 = (vtkRenderWindowInteractor *) 0 ;
+    vtkInteractorObserver *arg2 = (vtkInteractorObserver *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkRenderWindowInteractor *) carg1->obj;
+    }
+    {
+      if (carg2)
+      arg2 = (vtkInteractorObserver *) carg2->obj;
+    }
+    (arg1)->SetInteractorStyle(arg2);
+  }
+  
+  
+  SWIGEXPORTC /*aaaaaa*/SwigObj * _wrap_vtkRenderWindowInteractor_GetInteractorStyle(SwigObj * carg1) {
+    vtkInteractorObserver * cppresult;
+    vtkRenderWindowInteractor *arg1 = (vtkRenderWindowInteractor *) 0 ;
+    /*aaaaaa*/SwigObj * result;
+    
+    {
+      if (carg1)
+      arg1 = (vtkRenderWindowInteractor *) carg1->obj;
+    }
+    cppresult =  (vtkInteractorObserver *)(arg1)->GetInteractorStyle();
+    {
+      result = (SwigObj*) SWIG_create_object(SWIG_STR(vtkInteractorObserver));
+      result->obj = (void*) cppresult;
+    }
+    return result;
+  }
+  
+  
+  SWIGEXPORTC /*aaaaaa*/SwigObj * _wrap_vtkInteractorStyleTrackballCamera_New() {
+    vtkInteractorStyleTrackballCamera * cppresult;
+    /*aaaaaa*/SwigObj * result;
+    
+    cppresult =  (vtkInteractorStyleTrackballCamera *)vtkInteractorStyleTrackballCamera::New();
+    {
+      result = (SwigObj*) SWIG_create_object(SWIG_STR(vtkInteractorStyleTrackballCamera));
+      result->obj = (void*) cppresult;
+    }
+    return result;
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkInteractorStyleTrackballCamera_Delete(SwigObj * carg1) {
+    vtkInteractorStyleTrackballCamera *arg1 = (vtkInteractorStyleTrackballCamera *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkInteractorStyleTrackballCamera *) carg1->obj;
+    }
+    (arg1)->Delete();
+  }
+  
+  
+  SWIGEXPORTC /*aaaaaa*/SwigObj * _wrap_vtkBoxWidget_New() {
+    vtkBoxWidget * cppresult;
+    /*aaaaaa*/SwigObj * result;
+    
+    cppresult =  (vtkBoxWidget *)vtkBoxWidget::New();
+    {
+      result = (SwigObj*) SWIG_create_object(SWIG_STR(vtkBoxWidget));
+      result->obj = (void*) cppresult;
+    }
+    return result;
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkBoxWidget_Delete(SwigObj * carg1) {
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    (arg1)->Delete();
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkBoxWidget_SetInteractor(SwigObj * carg1, SwigObj * carg2) {
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    vtkRenderWindowInteractor *arg2 = (vtkRenderWindowInteractor *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    {
+      if (carg2)
+      arg2 = (vtkRenderWindowInteractor *) carg2->obj;
+    }
+    (arg1)->SetInteractor(arg2);
+  }
+  
+  
+  SWIGEXPORTC /*aaaaaa*/SwigObj * _wrap_vtkBoxWidget_GetInteractor(SwigObj * carg1) {
+    vtkRenderWindowInteractor * cppresult;
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    /*aaaaaa*/SwigObj * result;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    cppresult =  (vtkRenderWindowInteractor *)(arg1)->GetInteractor();
+    {
+      result = (SwigObj*) SWIG_create_object(SWIG_STR(vtkRenderWindowInteractor));
+      result->obj = (void*) cppresult;
+    }
+    return result;
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkBoxWidget_PlaceWidget(SwigObj * carg1) {
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    (arg1)->PlaceWidget();
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkBoxWidget_SetPlaceFactor(SwigObj * carg1, double carg2) {
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    double arg2 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    arg2 = (double) carg2;
+    (arg1)->SetPlaceFactor(arg2);
+  }
+  
+  
+  SWIGEXPORTC double _wrap_vtkBoxWidget_GetPlaceFactor(SwigObj * carg1) {
+    double cppresult;
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    double result;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    cppresult =  (double)(arg1)->GetPlaceFactor();
+    result = cppresult;
+    return result;
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkBoxWidget_SetProp3D(SwigObj * carg1, SwigObj * carg2) {
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    vtkProp3D *arg2 = (vtkProp3D *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    {
+      if (carg2)
+      arg2 = (vtkProp3D *) carg2->obj;
+    }
+    (arg1)->SetProp3D(arg2);
+  }
+  
+  
+  SWIGEXPORTC /*aaaaaa*/SwigObj * _wrap_vtkBoxWidget_GetProp3D(SwigObj * carg1) {
+    vtkProp3D * cppresult;
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    /*aaaaaa*/SwigObj * result;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    cppresult =  (vtkProp3D *)(arg1)->GetProp3D();
+    {
+      result = (SwigObj*) SWIG_create_object(SWIG_STR(vtkProp3D));
+      result->obj = (void*) cppresult;
+    }
+    return result;
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkBoxWidget_On(SwigObj * carg1) {
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    (arg1)->On();
+  }
+  
+  
+  SWIGEXPORTC void _wrap_vtkBoxWidget_Off(SwigObj * carg1) {
+    vtkBoxWidget *arg1 = (vtkBoxWidget *) 0 ;
+    
+    {
+      if (carg1)
+      arg1 = (vtkBoxWidget *) carg1->obj;
+    }
+    (arg1)->Off();
   }
   
   
